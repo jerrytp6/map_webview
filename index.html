@@ -1506,6 +1506,7 @@
 
         console.log('Android Bridge 已載入 (內嵌版本)');
     </script>
+    <script src="postmessage-patch.js"></script>
 </head>
 <body>
     <div id="app">
@@ -1822,7 +1823,7 @@
         async function loadSVG() {
             try {
                 const timestamp = new Date().getTime();
-                const response = await fetch(`expo2025.svg?t=${timestamp}`);
+                const response = await fetch(`map.svg?t=${timestamp}`);
                 if (!response.ok) {
                     throw new Error(`HTTP ${response.status}: ${response.statusText}`);
                 }
